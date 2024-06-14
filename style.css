@@ -1,3 +1,6 @@
+:root {
+  --main-color: #25456e;
+}
 body {
 background-color: #b4cae76c;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -27,6 +30,8 @@ background-color: #b4cae76c;
 .topmenu:hover {
   color: white;
   /* Add the styles here */
+  font-weight: bolder;
+  text-decoration: underline;
 }
 
 .topdiv {
@@ -62,7 +67,7 @@ h2 {
   font-size: 50px;
   text-align: center;
   float: left;
-  color: #7600bc;
+  color: var(--main-color);
   margin: 30px;
   margin-left: 60px;
   margin-top: 40px;
@@ -232,6 +237,7 @@ color: #56759e;
 }
 
 .recommendation {
+  font-family: 'Times New Roman', Times, serif;
   font-style: italic;
   text-align: left;
   width: 21.875rem;
@@ -247,7 +253,7 @@ color: #56759e;
 }
 
 .recommendation span {
-  color: #7600bc;
+  color: #25456e;
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
 }
@@ -258,7 +264,7 @@ color: #56759e;
   width: 48px;
   height: 48px;
   border-radius: 100%;
-  background-color: #7600bc;
+  background-color: #25456e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -272,14 +278,15 @@ color: #56759e;
 
 .popup {
   width:400px;
-  background-color: #e8bcf0;
+  background-color: #b4cae7;
   border-radius: 3mm;
   top: 50%;
   left:50%;
   transform: translate(-50%,-50%);
   text-align: center;
   position: fixed;
-  /* padding: 30px; */
+  border: solid 1px var(--main-color);
+  padding: 30px;
   visibility: hidden;
 }
 
@@ -289,8 +296,8 @@ color: #56759e;
 
 .popup button {
   background-color: #fff;
-  border: 1px solid #7600bc;
-  color: #7600bc;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
   display: block;
   border-radius: 6px;
   text-align: center;
@@ -303,8 +310,8 @@ color: #56759e;
 
 .popup button:hover {
   background-color: #fff;
-  border: 2px solid #7600bc;
-  color: #7600bc;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
   display: block;
   font-weight: bolder;
   text-align: center;
@@ -335,8 +342,8 @@ fieldset {
 
 button {
   background-color: #fff;
-  border: 1px solid #7600bc;
-  color: #7600bc;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
   display: block;
   border-radius: 6px;
   text-align: center;
@@ -347,8 +354,8 @@ button {
 }
 
 button:hover {
-  background-color: #7600bc;
-  border: 1px solid #7600bc;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
   color: #fff;
   display: block;
   border-radius: 6px;
