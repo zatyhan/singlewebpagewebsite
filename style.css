@@ -1,0 +1,69 @@
+:root{
+    --background-color: rgba(165, 214, 225, 0.723);
+    --font-color: #514d4d;
+    --main-font: "Garamond", "Times New Roman", Times, serif;
+}
+
+body {
+    /* display: flex; */
+}
+header {
+    font-size: 2em;
+    font-weight: 15;
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+.card_container {
+    margin-top: 4rem;
+    margin-inline: 1.2rem;
+    display:flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+}
+.card {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    /* display: block; */
+    border-radius: 3mm;
+    width: 110mm;
+    height: 18rem;
+    box-sizing: border-box;
+    margin: auto;
+    margin-bottom: 3em;
+    padding: 4rem;
+    justify-content: left;
+
+}
+ 
+.card_title {
+    font-family: var(--main-font);
+    font-weight: 10;
+    font-size: 3.5em;
+    margin: 0 auto;
+    text-align: left;
+    align-content: center;
+    line-height: 80px;
+
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.popup {
+    visibility: hidden;
+    background-color: cyan;
+    color: var(--font-color);
+    position: absolute;
+    display: block;
+    border-radius: 3mm;
+    width: 50%;
+    height: 100mm;
+    box-sizing: border-box;
+    /* margin: auto; */
+    padding: 4rem;
+    justify-content: center;
+
+}
