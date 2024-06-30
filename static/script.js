@@ -7,6 +7,7 @@
 // // function foo(){
 // //     console.log('hello');
 // // }
+
 var i = 0;
 var headerText = "zatyhan\'s space";
 var speed = 100;
@@ -22,19 +23,35 @@ function typeWriter()
         setInterval(()=> {
             $("header .blink").fadeOut(300);
             $("header .blink").fadeIn(300);
-        }, 2000);
+        }, 600);
         
     }
     // if (i == headerText.length)
-    // {
-    //         $('header').html();
-    //         i=0;
-    //         currentText='';
-    // }
+    //     {
+    //         setInterval(()=> {
+    //             $("header .blink").fadeOut(300);
+    //             $("header .blink").fadeIn(300);
+    //         }, 600);
+    //         // $('header').html();
+    //         // setTimeout(()=> {
+    //             //     i=0;
+    //             //     currentText='';
+    //             //     // typeWriter();
+    //             // }, 3000)
+                
+    //         }
 }
 
-
-
+function typeWriterCaller() {
+    i=0;
+    currentText='';
+    typeWriter();
+    // console.log('calling');
+    // setTimeout(typeWriter(), 5000);
+}
+        
+        
+        
 $(document).ready(function(){
     var verticalCircleAnime = anime({
         targets: '.vertical-line',
@@ -42,7 +59,7 @@ $(document).ready(function(){
         easing: 'linear',
         duration: 3000,
         repeat: 1
-        // loop: true,
+    // loop: true,
     });
 
     var educationAnime = anime.timeline({
@@ -93,16 +110,7 @@ $(document).ready(function(){
     });
 
     $('.popup').hide();
-    $('.popup.education').show();
-    typeWriter();
-    // setInterval(()=>{
-    //     typeWriter();
-    //     setInterval(()=> {
-    //         $("header .blink").fadeOut(300);
-    //         $("header .blink").fadeIn(300);
-    //     },
-    //     2000);
-    // }, 5000);
+    setInterval(typeWriterCaller, 5000);
 
 
     $('.card').hover(function(){
