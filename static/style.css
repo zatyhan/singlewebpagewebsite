@@ -247,14 +247,23 @@ p {
 .timeline {
     position: relative;
     display: block;
-    height: 50%;
-    overflow-y: hidden;
+    /* height: auto; */
+    /* background-color: red; */
+    /* height: 50%; */
+    /* min-height: fit-content; */
+    /* overflow-y: hidden; */
     /* flex-direction: column; */
 }
 
-/* .year:first-of-type {
-    margin-top: 1rem;
-} */
+._2016 {
+    height:10em;
+}
+._2017 {
+    height:20em;
+}
+._2019 {
+    height:30em;
+}
 
 
 .year {
@@ -263,17 +272,28 @@ p {
     font-size: 3vmax;
     padding: 0.5rem;
     width: fit-content;
+    height: 3vmax;
     left: 0; 
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
-    top: 25%;
+    overflow: hidden;
+    /* top: 25%; */
     /* z-index: 1; */
 }
 
-/* .hs1 .ed-title {
-    margin-top: 2rem;
-} */
+._2016 .year {
+    top: 40%;
+}
+
+._2017 .year {
+    top: 25%;
+}
+
+._2019 .year {
+    top: 17%;
+}
+
 
 .edbox {
     position: absolute;
@@ -303,6 +323,7 @@ p {
     background-color: rgba(190, 230, 238, 0.984);
     margin-top: 1rem;
     padding: 1rem 2rem 1rem 1rem;
+    height: fit-content;
     
 }
 
