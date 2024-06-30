@@ -131,8 +131,9 @@ p {
     text-align: justify;
 }
 
+
 .close-container{
-    /* position: relative; */
+    position: relative;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
@@ -143,9 +144,10 @@ p {
     text-align: center;
     /* margin-top: 100px; */
     cursor: pointer;
-  }
-  
-  .leftright{
+    z-index: 1;
+}
+
+.leftright{
     height: 4px;
     width: 2rem;
     position: absolute;
@@ -158,6 +160,7 @@ p {
     border-radius: 2px;
     transform: rotate(45deg);
     transition: all .3s ease-in;
+    /* z-index: 0; */
 }
 
 .rightleft{
@@ -172,9 +175,10 @@ p {
     border-radius: 2px;
     transform: rotate(-45deg);
     transition: all .3s ease-in;
-  }
-  
-  .close-container label{
+    /* z-index: 0; */
+}
+
+.close-container label{
     color: white;
     font-family: Helvetica, Arial, sans-serif; 
     font-size: .5em;
@@ -182,23 +186,128 @@ p {
     letter-spacing: 2px;
     transition: all .3s ease-in;
     opacity: 0;
-  }
-  .close{
+    z-index: -1;
+    /* z-index: 0; */
+}
+.close{
     left: 0;
     right: 0;
     margin: 1.2rem auto 0;
     position: absolute;
-  }
-  
-  .close-container:hover .leftright{
+}
+
+.close-container:hover .leftright{
     transform: rotate(-45deg);
     background-color: var(--tomatored);
-  }
-  .close-container:hover .rightleft{
+}
+.close-container:hover .rightleft{
     transform: rotate(45deg);
     background-color: var(--tomatored);
-  }
-  .close-container:hover label{
-    opacity: 1;
-  }
-  
+}
+.close-container:hover label{
+    opacity: 1;     
+}
+/* education popup  */
+
+.edu-container {
+    position: relative;
+    display: block;
+    height: 100%;
+    margin-top: 2rem;
+}
+.vertical-circle {
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    background-color: white;
+    border-radius: 50%;
+    /* top: 0;
+    left: 48.4%; */
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+
+}
+.vertical-line {
+    position: absolute;
+    width: 1rem;
+    height: 20px;
+    background-color: var(--softorange);
+    top: 8%;
+    /* left: 50%; */
+    /* right: 50%; */
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+
+.timeline {
+    position: relative;
+    display: block;
+    height: 50%;
+    overflow-y: hidden;
+    /* flex-direction: column; */
+}
+
+/* .year:first-of-type {
+    margin-top: 1rem;
+} */
+
+
+.year {
+    position: absolute;
+    background-color: wheat;
+    font-size: 3vmax;
+    padding: 0.5rem;
+    width: fit-content;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    top: 25%;
+    /* z-index: 1; */
+}
+
+/* .hs1 .ed-title {
+    margin-top: 2rem;
+} */
+
+.edbox {
+    position: absolute;
+    /* position: fixed; */
+    /* box-sizing: content-box; */
+    /* display: inline-block; */
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 40%;
+    overflow: hidden;
+    top: 0;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    height: 0;
+}
+
+.ed-title {
+    background-color: rgba(145, 191, 200, 0.984);
+    padding: 1px 2rem;
+    /* margin: 0 2rem; */
+}
+
+.ed-content {
+    background-color: rgba(190, 230, 238, 0.984);
+    margin-top: 1rem;
+    padding: 1rem 2rem 1rem 1rem;
+    
+}
+
+ul {
+    text-align: justify;
+    margin: 0;
+}
+
