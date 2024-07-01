@@ -110,6 +110,7 @@ $(document).ready(function(){
     });
 
     $('.popup').hide();
+    $('.popup.contact-info').show();
     setInterval(typeWriterCaller, 5000);
 
 
@@ -122,6 +123,7 @@ $(document).ready(function(){
     $('.card').click(function(){
         console.log($(this).attr("id"));
         $('.popup.'+$(this).attr("id")).show();
+        $('.popup.'+$(this).attr("id")).scrollTop(0);
         if ($(this).attr("id")=="education")
         {
             verticalCircleAnime.restart();
