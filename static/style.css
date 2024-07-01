@@ -337,3 +337,9 @@ ul {
     margin-top: 30px;
     font-size: 2rem;
 }
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
